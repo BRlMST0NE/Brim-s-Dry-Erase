@@ -7,6 +7,9 @@
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
+String.prototype.replace_all = function(str, newstr) {
+    return this.split(str).join(newstr);
+};
 
 window.XMLHttpRequest = class extends window.XMLHttpRequest {
 	open( method, url ) {
